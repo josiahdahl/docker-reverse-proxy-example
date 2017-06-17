@@ -1,0 +1,39 @@
+version: '2'
+services:
+    site3:
+        build:
+            context: ./nginx
+            args:
+            - PHP_UPSTREAM=php-fpm
+        volumes:
+        - ./nginx/sites:/etc/nginx/sites-available 
+        - ./public:/var/www/public
+        ports:
+        - "8083:80"
+        expose:
+        - "80"
+        environment:
+        - VIRTUAL_HOST=site3.dev
+        depends_on:
+        - php-fpm
+        networks:
+        - default
+        - backend
+
+    php-fpm:
+        build:
+            context: ./php-fpm
+        volumes:
+        - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
+        - ./public:/var/www/public
+        expose:
+        - "9000"
+        networks:
+        - backend
+
+networks:
+    backend:
+        driver: bridge
+    default: 
+        external:
+            name: reverseproxy_default
