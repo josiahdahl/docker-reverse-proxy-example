@@ -20,7 +20,7 @@ Then...
 
 * After the images are built you'll see the log output
 * Navigate to site1.dev and site2.dev, you should see the "Hello World" message served through the reverse proxy
-* Navigate to site1.dev:8080 and site2.dev:8080 to see the "Hello World" served from the container itself
+* Navigate to site1.dev:8080 and site2.dev:8081 to see the "Hello World" served from the container itself
 
 ### Reference: 
 * [jwilder/reverse-proxy](https://github.com/jwilder/nginx-proxy)
