@@ -1,0 +1,10 @@
+server {
+
+    listen ${NGINX_PORT} default_server;
+    listen [::]:${NGINX_PORT} default_server;
+
+    server_name ${NGINX_HOST};
+    root /var/www/public;
+    index index.php index.html index.htm;
+
+}
