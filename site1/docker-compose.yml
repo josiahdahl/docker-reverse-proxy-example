@@ -1,18 +1,20 @@
 version: '2'
 services:
-    site2:
+    site1:
         image: nginx
         volumes:
         - ./site.template:/etc/nginx/conf.d/site.template
         - ./public:/var/www/public
+        ports:
+        - "8080:80"
         expose:
         - "80"
         environment:
-        - VIRTUAL_HOST=service2.dev
-        - NGINX_HOST=service2.dev
+        - VIRTUAL_HOST=site1.dev
+        - NGINX_HOST=site1.dev
         - NGINX_PORT=80
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/site.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 networks:
     default:
         external:
-            name: proxy_default
+            name: reverseproxy_default
