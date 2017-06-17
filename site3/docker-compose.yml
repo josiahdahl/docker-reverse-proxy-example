@@ -13,7 +13,7 @@ services:
         expose:
         - "80"
         environment:
-        - VIRTUAL_HOST=site3.dev
+        - VIRTUAL_HOST=site3.docker-proxy.dev
         depends_on:
         - php-fpm
         networks:
