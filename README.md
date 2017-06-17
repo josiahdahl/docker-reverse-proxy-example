@@ -22,6 +22,8 @@ Then...
 * Navigate to site1.dev and site2.dev, you should see the "Hello World" message served through the reverse proxy
 * Navigate to site1.dev:8080 and site2.dev:8081 to see the "Hello World" served from the container itself
 
+If you started using run.sh, type `./stop.sh` to stop the containers easily  
+
 ### Reference: 
 * [jwilder/reverse-proxy](https://github.com/jwilder/nginx-proxy)
 * [nginx](https://hub.docker.com/_/nginx/)
