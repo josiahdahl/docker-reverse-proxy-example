@@ -9,6 +9,7 @@ This is an example repo of how to set up a reverse proxy using Docker, nginx, an
 ### How to use:
 * Clone/fork this repository
 * Add site1.docker-proxy.dev, site2.docker-proxy.dev, and site3.docker-proxy.dev to your /etc/hosts file
+* create the docker networ: docker network create --driver bridge reverseproxy_default
 
 #### "I want to see everything"
 * Open three terminal windows
