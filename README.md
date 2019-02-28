@@ -8,7 +8,7 @@ This is an example repo of how to set up a reverse proxy using Docker, nginx, an
 
 ### How to use:
 * Clone/fork this repository
-* Add site1.docker-proxy.dev, site2.docker-proxy.dev, and site3.docker-proxy.dev to your /etc/hosts file
+* Add site1.docker-proxy.localhost, site2.docker-proxy.localhost, and site3.docker-proxy.localhost to your /etc/hosts file
 
 #### "I want to see everything"
 * Open four terminal windows
@@ -19,8 +19,8 @@ This is an example repo of how to set up a reverse proxy using Docker, nginx, an
 Then...  
 
 * After the images are built you'll see the log output
-* Navigate to site1.docker-proxy.dev, site2.docker-proxy.dev, and site3.docker-proxy.dev, you should see the "Hello World" message served through the reverse proxy
-* Navigate to site1.docker-proxy.dev:8080, site2.docker-proxy.dev:8081, and site3.docker-proxy.dev:8082 to see the "Hello World" served from the container itself
+* Navigate to site1.docker-proxy.localhost, site2.docker-proxy.localhost, and site3.docker-proxy.localhost, you should see the "Hello World" message served through the reverse proxy
+* Navigate to site1.docker-proxy.localhost:8080, site2.docker-proxy.localhost:8081, and site3.docker-proxy.localhost:8082 to see the "Hello World" served from the container itself
 
 If you started using run.sh, type `./stop.sh` to stop the containers easily  
 
