@@ -8,11 +8,11 @@ services:
         expose:
         - "80"
         environment:
-        - VIRTUAL_HOST=site2.docker-proxy.dev
-        - NGINX_HOST=site2.docker-proxy.dev
+        - VIRTUAL_HOST=site2.docker-proxy.localhost
+        - NGINX_HOST=site2.docker-proxy.localhost
         - NGINX_PORT=80
         command: /bin/bash -c "envsubst < /etc/nginx/conf.d/site.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
 networks:
     default:
         external:
-            name: reverseproxy_default
+            name: reverse-proxy_default

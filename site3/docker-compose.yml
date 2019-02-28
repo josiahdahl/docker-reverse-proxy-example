@@ -13,7 +13,7 @@ services:
         expose:
         - "80"
         environment:
-        - VIRTUAL_HOST=site3.docker-proxy.dev
+        - VIRTUAL_HOST=site3.docker-proxy.localhost
         depends_on:
         - php-fpm
         networks:
@@ -36,4 +36,4 @@ networks:
         driver: bridge
     default: 
         external:
-            name: reverseproxy_default
+            name: reverse-proxy_default
