@@ -36,4 +36,4 @@ networks:
         driver: bridge
     default: 
         external:
-            name: reverseproxy_default
+            name: reverse-proxy_default

@@ -17,4 +17,4 @@ services:
 networks:
     default:
         external:
-            name: reverseproxy_default
+            name: reverse-proxy_default
